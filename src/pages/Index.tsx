@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const PORTFOLIO_IMAGE = "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/c0539ee5-e08b-4b0d-8d4e-f8a8e85b0cd5.jpg";
+const ABOUT_IMAGE = "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/0d592215-840e-4c06-924e-bfc6e66943f2.jpg";
 
 const navLinks = [
   { label: "Обо мне", href: "#about" },
@@ -301,8 +302,8 @@ export default function Index() {
           <AnimSection>
             <div className="relative">
               <img
-                src={PORTFOLIO_IMAGE}
-                alt="Портфолио"
+                src={ABOUT_IMAGE}
+                alt="Александр Нечаев"
                 className="w-full aspect-[4/5] object-cover"
                 style={{ filter: "grayscale(20%) contrast(1.05)" }}
               />
