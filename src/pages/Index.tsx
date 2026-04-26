@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Обо мне", href: "#about" },
   { label: "Услуги", href: "#services" },
   { label: "Портфолио", href: "#portfolio" },
+  { label: "Видеообложки", href: "#video-covers" },
   { label: "Маркетплейсы", href: "#marketplaces" },
   { label: "Кейсы", href: "#cases" },
   { label: "Отзывы", href: "#reviews" },
@@ -65,24 +66,24 @@ const services = [
 const portfolioWorks = [
   {
     title: "MAISON DORÉE",
-    cat: "Брендинг",
+    cat: "Предметная съёмка",
     year: "2024",
-    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/a5fac17e-38dc-4398-9e39-721f24b977cd.jpg",
-    desc: "Полная визуальная идентичность для ювелирного дома",
-  },
-  {
-    title: "Бюро Form",
-    cat: "Веб-дизайн",
-    year: "2024",
-    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/2e8a2547-50c7-44e2-a3f9-061a87efd919.jpg",
-    desc: "Сайт-портфолио для архитектурного бюро, Москва",
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/1cb321f2-c3bc-4c9e-9631-8a98b322509d.jpg",
+    desc: "Съёмка парфюмерной коллекции для ювелирного дома",
   },
   {
     title: "Noir Cosmetics",
     cat: "Упаковка",
-    year: "2023",
-    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/29ddb682-1794-467b-9bb0-770bacf2f1bb.jpg",
+    year: "2024",
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/31d1a3f4-abde-4bd0-9b4d-01af39ac87f2.jpg",
     desc: "Линейка из 12 продуктов категории luxury skincare",
+  },
+  {
+    title: "Brand Identity",
+    cat: "Логотип и айдентика",
+    year: "2023",
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/7eba89e1-5f8b-4841-ba00-8e563d19843f.jpg",
+    desc: "Разработка фирменного стиля для премиум-бренда",
   },
   {
     title: "Meridian Group",
@@ -90,6 +91,27 @@ const portfolioWorks = [
     year: "2023",
     img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/ad0c4421-2f94-4108-b13f-b3ef9f9e094e.jpg",
     desc: "Обновление корпоративного стиля девелопера",
+  },
+];
+
+const videoCovers = [
+  {
+    title: "Fashion Brand — YouTube",
+    desc: "Обложка для главного ролика fashion-бренда. Тёмная эстетика, золотая типографика.",
+    tag: "YouTube",
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/12390ea6-7f9b-4107-9a15-9e644c312cad.jpg",
+  },
+  {
+    title: "Beauty Reels — Instagram",
+    desc: "Серия обложек для Reels beauty-бренда. Единый стиль, высокая узнаваемость в ленте.",
+    tag: "Instagram Reels",
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/efdb3c88-6fb9-4ff0-80ff-6d59a38ee402.jpg",
+  },
+  {
+    title: "Jewelry — Brand Film",
+    desc: "Кинематографичная обложка для рекламного ролика ювелирного бренда.",
+    tag: "Brand Video",
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/d22aca69-11f8-4d27-a6ba-893f019d6f52.jpg",
   },
 ];
 
@@ -427,6 +449,76 @@ export default function Index() {
               </AnimSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* VIDEO COVERS */}
+      <section id="video-covers" className="py-28 px-8 md:px-16 bg-charcoal">
+        <div className="max-w-6xl mx-auto">
+          <AnimSection>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="block w-8 h-px bg-gold" />
+              <span className="text-xs tracking-[0.4em] uppercase text-gold">Видеообложки</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
+              <h2 className="font-display font-light leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+                Обложки для<br /><em className="not-italic text-gold">YouTube и Reels</em>
+              </h2>
+              <p className="text-ivory/45 text-sm max-w-xs leading-relaxed md:text-right mb-2">
+                Дизайн обложек, которые останавливают взгляд в ленте и увеличивают CTR ролика.
+              </p>
+            </div>
+          </AnimSection>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {videoCovers.map((v, i) => (
+              <AnimSection key={v.title}>
+                <div className="group" style={{ transitionDelay: `${i * 0.1}s` }}>
+                  <div className="relative overflow-hidden mb-5">
+                    <img
+                      src={v.img}
+                      alt={v.title}
+                      className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-obsidian/0 group-hover:bg-obsidian/30 transition-all duration-500 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-14 h-14 border border-gold flex items-center justify-center">
+                        <Icon name="Play" size={20} className="text-gold ml-1" />
+                      </div>
+                    </div>
+                    <div className="absolute top-3 left-3">
+                      <span className="text-xs tracking-widest uppercase px-3 py-1.5 bg-obsidian/80 border border-gold/30 text-gold backdrop-blur-sm">
+                        {v.tag}
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className="font-display text-lg font-light mb-2 group-hover:text-gold transition-colors duration-300">{v.title}</h3>
+                  <p className="text-ivory/50 text-sm leading-relaxed">{v.desc}</p>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
+
+          <AnimSection>
+            <div className="mt-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-white/8 pt-10">
+              <div className="flex flex-wrap gap-8">
+                {[["от 3 000 ₽", "одна обложка"], ["от 8 000 ₽", "пакет 5 штук"], ["от 20 000 ₽", "серия для канала"]].map(([price, label]) => (
+                  <div key={label}>
+                    <div className="font-display text-2xl text-gold font-light">{price}</div>
+                    <div className="text-xs tracking-widest uppercase text-ivory/30 mt-1">{label}</div>
+                  </div>
+                ))}
+              </div>
+              <a
+                href="https://wa.me/79582323041?text=Здравствуйте!%20Хочу%20заказать%20видеообложки"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-obsidian transition-all duration-500 flex-shrink-0"
+              >
+                Обсудить проект
+                <Icon name="ArrowRight" size={14} />
+              </a>
+            </div>
+          </AnimSection>
         </div>
       </section>
 
