@@ -511,8 +511,9 @@ export default function Index() {
 
             <div className="space-y-5">
               {[
-                { icon: "Mail", label: "Email", val: "nechaev@a-studio.ru" },
-                { icon: "Phone", label: "Telegram", val: "@nechaev_design" },
+                { icon: "Mail", label: "Email", val: "bogatyrevdima131@gmail.com" },
+                { icon: "Phone", label: "Телефон", val: "+7 (958) 232-30-41" },
+                { icon: "MessageCircle", label: "WhatsApp / MAX", val: "+7 (958) 232-30-41" },
                 { icon: "MapPin", label: "Работаю из", val: "Москва · удалённо" },
               ].map(item => (
                 <div key={item.label} className="flex items-center gap-4">
