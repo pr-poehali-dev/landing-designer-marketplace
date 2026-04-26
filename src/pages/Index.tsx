@@ -7,9 +7,31 @@ const navLinks = [
   { label: "Обо мне", href: "#about" },
   { label: "Услуги", href: "#services" },
   { label: "Портфолио", href: "#portfolio" },
+  { label: "Маркетплейсы", href: "#marketplaces" },
   { label: "Кейсы", href: "#cases" },
   { label: "Отзывы", href: "#reviews" },
   { label: "Контакты", href: "#contact" },
+];
+
+const marketplaceWorks = [
+  {
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/4c095b9c-7440-4d78-bf54-87d9a4d5bfd6.jpg",
+    title: "Главное фото товара",
+    desc: "Студийный снимок на белом фоне по требованиям Wildberries и Ozon. Чёткость, правильный кроп, без лишних элементов.",
+    tag: "Предметная съёмка",
+  },
+  {
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/3b55020e-5620-47c3-9b6f-8050af11fb75.jpg",
+    title: "До / После",
+    desc: "Переработка существующих фото под стандарты площадки. Обрезка, ретушь, цветокоррекция, выравнивание по шаблону.",
+    tag: "Ретушь и обработка",
+  },
+  {
+    img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/d57d7f73-8081-40e5-a059-7dd7d653d5ba.jpg",
+    title: "Инфографика карточки",
+    desc: "Дизайн слайдов с составом, преимуществами, размерами. Повышает конверсию карточки без изменения цены товара.",
+    tag: "Инфографика",
+  },
 ];
 
 const services = [
@@ -407,6 +429,80 @@ export default function Index() {
         </div>
       </section>
 
+      {/* MARKETPLACES */}
+      <section id="marketplaces" className="py-28 px-8 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <AnimSection>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="block w-8 h-px bg-gold" />
+              <span className="text-xs tracking-[0.4em] uppercase text-gold">Маркетплейсы</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+              <h2 className="font-display font-light" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+                Фото товаров<br />для <em className="not-italic text-gold">Wildberries и Ozon</em>
+              </h2>
+              <p className="text-ivory/45 text-sm max-w-xs leading-relaxed md:text-right mb-2">
+                Снимаю, ретуширую и делаю инфографику по стандартам площадок — под ключ за 2–3 дня.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 mb-16">
+              {["Wildberries", "Ozon", "Яндекс Маркет", "AliExpress"].map(p => (
+                <span key={p} className="text-xs tracking-widest uppercase px-4 py-2 border border-gold/25 text-gold/60">
+                  {p}
+                </span>
+              ))}
+            </div>
+          </AnimSection>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {marketplaceWorks.map((w, i) => (
+              <AnimSection key={w.title}>
+                <div className="group cursor-default" style={{ transitionDelay: `${i * 0.1}s` }}>
+                  <div className="relative overflow-hidden mb-5">
+                    <img
+                      src={w.img}
+                      alt={w.title}
+                      className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute top-3 left-3">
+                      <span className="text-xs tracking-widest uppercase px-3 py-1.5 bg-obsidian/80 border border-gold/30 text-gold backdrop-blur-sm">
+                        {w.tag}
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className="font-display text-xl font-light mb-2 group-hover:text-gold transition-colors duration-300">{w.title}</h3>
+                  <p className="text-ivory/50 text-sm leading-relaxed">{w.desc}</p>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
+
+          <AnimSection>
+            <div className="mt-14 border border-white/8 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div>
+                <div className="font-display text-xl font-light mb-2">Пакет «Старт» — 10 товаров</div>
+                <p className="text-ivory/45 text-sm">Главное фото + 3 слайда инфографики на каждый товар. Срок — 5 рабочих дней.</p>
+              </div>
+              <div className="flex items-center gap-6 flex-shrink-0">
+                <div>
+                  <div className="font-display text-3xl text-gold font-light">15 000 ₽</div>
+                  <div className="text-xs tracking-widest uppercase text-ivory/30 mt-1">за пакет</div>
+                </div>
+                <a
+                  href="https://wa.me/79582323041?text=Здравствуйте!%20Хочу%20заказать%20фото%20для%20маркетплейса"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-obsidian transition-all duration-500"
+                >
+                  Заказать
+                  <Icon name="ArrowRight" size={14} />
+                </a>
+              </div>
+            </div>
+          </AnimSection>
+        </div>
+      </section>
+
       {/* CASES */}
       <section id="cases" className="py-28 px-8 md:px-16 bg-charcoal">
         <div className="max-w-6xl mx-auto">
@@ -592,6 +688,17 @@ export default function Index() {
           </AnimSection>
         </div>
       </section>
+
+      {/* FLOATING WHATSAPP */}
+      <a
+        href="https://wa.me/79582323041"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-gold flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"
+        title="Написать в WhatsApp"
+      >
+        <Icon name="MessageCircle" size={24} className="text-obsidian" />
+      </a>
 
       {/* FOOTER */}
       <footer className="py-10 px-8 md:px-16 border-t border-white/5">
