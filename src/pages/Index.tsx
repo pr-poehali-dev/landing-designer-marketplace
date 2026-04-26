@@ -220,7 +220,7 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 px-8 py-5 flex items-center justify-between"
         style={{ background: "linear-gradient(to bottom, rgba(14,14,14,0.95), transparent)" }}>
         <a href="#" className="font-display text-xl font-light tracking-[0.3em] text-ivory uppercase">
-          A.Studio
+          Дизайн Дмитрий
         </a>
 
         <ul className="hidden md:flex items-center gap-8">
@@ -796,7 +796,7 @@ export default function Index() {
       {/* FOOTER */}
       <footer className="py-10 px-8 md:px-16 border-t border-white/5">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-display text-lg font-light tracking-[0.3em] text-ivory/40 uppercase">A.Studio</span>
+          <span className="font-display text-lg font-light tracking-[0.3em] text-ivory/40 uppercase">Дизайн Дмитрий</span>
           <span className="text-xs text-ivory/20 tracking-widest">© 2024 · Все права защищены</span>
           <div className="flex items-center gap-5">
             {["Instagram", "Behance", "Telegram"].map(s => (
