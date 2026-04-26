@@ -13,61 +13,122 @@ const navLinks = [
 ];
 
 const services = [
-  { num: "01", title: "Брендинг", desc: "Разработка фирменного стиля, логотипа и визуальной идентичности, которая запоминается." },
-  { num: "02", title: "Веб-дизайн", desc: "Создание сайтов с высокой конверсией и безупречной эстетикой для премиум-брендов." },
-  { num: "03", title: "Упаковка", desc: "Дизайн упаковки, который выделяет продукт на полке и передаёт ценность бренда." },
-  { num: "04", title: "Навигация", desc: "Системы навигации, вывески и средовой дизайн для бизнеса любого масштаба." },
+  {
+    num: "01",
+    title: "Брендинг",
+    desc: "Создаю визуальную систему с нуля: логотип, палитра, типографика, паттерны, руководство по стилю. Работаю так, чтобы бренд выглядел последовательно — от визитки до билборда.",
+    detail: "от 80 000 ₽ · 3–4 недели",
+  },
+  {
+    num: "02",
+    title: "Веб-дизайн",
+    desc: "Проектирую сайты, которые продают: лендинги, корпоративные порталы, интернет-магазины. Полный цикл — от исследования и прототипа до финального макета с анимациями.",
+    detail: "от 60 000 ₽ · 2–3 недели",
+  },
+  {
+    num: "03",
+    title: "Дизайн упаковки",
+    desc: "Разрабатываю упаковку, которую хочется взять в руки. Работаю с FMCG, beauty, food и lifestyle-брендами. Предоставляю макеты, готовые к печати, с учётом технических требований производства.",
+    detail: "от 40 000 ₽ · 1–2 недели",
+  },
+  {
+    num: "04",
+    title: "Ребрендинг",
+    desc: "Помогаю компаниям обновить устаревший образ без потери узнаваемости. Провожу аудит текущего стиля, анализирую конкурентов и предлагаю эволюционное или революционное решение.",
+    detail: "от 120 000 ₽ · 4–6 недель",
+  },
 ];
 
 const portfolioWorks = [
-  { title: "Идентификация MAISON", cat: "Брендинг", year: "2024", img: PORTFOLIO_IMAGE },
-  { title: "Архивный проект", cat: "Веб-дизайн", year: "2024", img: PORTFOLIO_IMAGE },
-  { title: "Noir Packaging", cat: "Упаковка", year: "2023", img: PORTFOLIO_IMAGE },
-  { title: "Meridian Identity", cat: "Брендинг", year: "2023", img: PORTFOLIO_IMAGE },
+  {
+    title: "MAISON DORÉE",
+    cat: "Брендинг",
+    year: "2024",
+    img: PORTFOLIO_IMAGE,
+    desc: "Полная визуальная идентичность для ювелирного дома",
+  },
+  {
+    title: "Бюро Form",
+    cat: "Веб-дизайн",
+    year: "2024",
+    img: PORTFOLIO_IMAGE,
+    desc: "Сайт-портфолио для архитектурного бюро, Москва",
+  },
+  {
+    title: "Noir Cosmetics",
+    cat: "Упаковка",
+    year: "2023",
+    img: PORTFOLIO_IMAGE,
+    desc: "Линейка из 12 продуктов категории luxury skincare",
+  },
+  {
+    title: "Meridian Group",
+    cat: "Ребрендинг",
+    year: "2023",
+    img: PORTFOLIO_IMAGE,
+    desc: "Обновление корпоративного стиля девелопера",
+  },
 ];
 
 const cases = [
   {
     num: "01",
-    title: "Перезапуск бренда MAISON",
-    result: "+340% к узнаваемости",
-    desc: "Полный редизайн идентичности премиум-ювелирного дома. Разработка 120+ элементов фирменного стиля, упаковки и цифровых активов.",
-    tags: ["Брендинг", "Упаковка", "Digital"],
+    title: "Перезапуск бренда MAISON DORÉE",
+    result: "+340% узнаваемость",
+    desc: "Ювелирный дом с 15-летней историей выходил в новый сегмент — молодая аудитория 25–35 лет. Разработал новую айдентику: лаконичный логотип, золотую монограмму, систему из 140+ фирменных элементов. Запустил обновлённый сайт и Instagram-визуал.",
+    tags: ["Брендинг", "Упаковка", "Digital", "SMM-визуал"],
+    period: "Март – Июнь 2024",
   },
   {
     num: "02",
-    title: "Сайт для архитектурного бюро",
-    result: "×2.4 конверсия",
-    desc: "Редизайн сайта с нуля — фокус на портфолио и заявках. Внедрение CMS, адаптивная вёрстка, скорость загрузки <1.5с.",
-    tags: ["Веб-дизайн", "UX/UI", "Разработка"],
+    title: "Сайт бюро Form — архитектура и интерьер",
+    result: "×2.4 конверсия в заявки",
+    desc: "Старый сайт не отражал уровень работ. Провёл UX-аудит, спроектировал новую структуру с акцентом на портфолио. Адаптивная вёрстка, скорость загрузки 1.2с, удобная CMS для самостоятельного обновления проектов.",
+    tags: ["Веб-дизайн", "UX/UI", "Прототипирование"],
+    period: "Январь – Февраль 2024",
   },
   {
     num: "03",
-    title: "Линейка Noir Cosmetics",
-    result: "Выход в 3 сети ретейла",
-    desc: "Создание упаковки для линейки из 12 продуктов. Концепция, иллюстрации, технические макеты для производства.",
-    tags: ["Упаковка", "Иллюстрация"],
+    title: "Упаковка линейки Noir Cosmetics",
+    result: "Вход в 3 федеральные сети",
+    desc: "Стартап без узнаваемости хотел попасть на полки «Золотого Яблока» и «Лэтуаль». Разработал концепцию, иллюстрации, технические макеты для 12 SKU. Упаковка прошла проверку байеров с первого раза.",
+    tags: ["Упаковка", "Иллюстрация", "Полиграфия"],
+    period: "Сентябрь – Октябрь 2023",
   },
 ];
 
 const reviews = [
   {
     name: "Елена Морозова",
-    role: "CEO, Maison Rouge",
-    text: "Работа превзошла все ожидания. Наш бренд получил новую жизнь — клиенты замечают разницу и говорят об этом.",
+    role: "CEO, Maison Dorée",
+    avatar: "ЕМ",
+    text: "Александр полностью погрузился в DNA нашего бренда. Результат — не просто красиво, а точно в цель. После обновления мы получили запросы от байеров, которые раньше нас игнорировали.",
     rating: 5,
+    date: "Июнь 2024",
   },
   {
     name: "Артём Волков",
-    role: "Основатель, Meridian Studio",
-    text: "Редкое сочетание вкуса и профессионализма. Все дедлайны соблюдены, результат — на уровне лучших европейских агентств.",
+    role: "Основатель, Бюро Form",
+    avatar: "АВ",
+    text: "Работаем уже второй раз. Редкое сочетание визуального вкуса и понимания бизнес-задачи. Сдал в срок, объяснил каждое решение, никаких правок после финала.",
     rating: 5,
+    date: "Март 2024",
   },
   {
     name: "Мария Соколова",
-    role: "Директор по маркетингу, Noir Cosmetics",
-    text: "Упаковка, которую создал дизайнер, помогла нам зайти в три сети ретейла. Это говорит само за себя.",
+    role: "CMO, Noir Cosmetics",
+    avatar: "МС",
+    text: "Мы боялись, что не пройдём проверку байеров — уж слишком нишевая эстетика. Прошли. Упаковка стала нашим главным аргументом на переговорах с ретейлерами.",
     rating: 5,
+    date: "Ноябрь 2023",
+  },
+  {
+    name: "Игорь Беляев",
+    role: "Директор, Meridian Group",
+    avatar: "ИБ",
+    text: "Поставили жёсткий дедлайн — 3 недели на ребрендинг. Уложились. Ни разу не пожалел о выборе — работа системная, без хаоса и лишних итераций.",
+    rating: 5,
+    date: "Август 2023",
   },
 ];
 
@@ -231,17 +292,20 @@ export default function Index() {
               <span className="text-xs tracking-[0.4em] uppercase text-gold">О мне</span>
             </div>
             <h2 className="font-display font-light leading-tight mb-6" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
-              Дизайнер с<br />
-              философией красоты
+              Александр Нечаев —<br />
+              <em className="not-italic text-gold">дизайнер брендов</em>
             </h2>
             <p className="text-ivory/60 leading-relaxed mb-6">
-              Я работаю на стыке визуальной культуры и бизнес-задач. Каждый проект — это исследование: я изучаю аудиторию, конкурентов и ценности бренда, чтобы создать дизайн, который работает.
+              Начинал как арт-директор в агентстве Depot WPF, затем ушёл в самостоятельную практику. Сейчас работаю напрямую с владельцами бизнеса — без посредников и «испорченного телефона».
             </p>
-            <p className="text-ivory/60 leading-relaxed mb-10">
-              За 8 лет — более 150 проектов для брендов из России, Европы и США. Специализация: премиум-сегмент, мода, архитектура, beauty и lifestyle.
+            <p className="text-ivory/60 leading-relaxed mb-6">
+              Специализируюсь на премиум-сегменте: мода, ювелирное дело, архитектура, beauty и lifestyle. Мои работы выходили в Adweek, Packaging Digest и номинировались на Red Dot Award 2023.
+            </p>
+            <p className="text-ivory/50 text-sm leading-relaxed mb-10 border-l-2 border-gold/40 pl-4 italic">
+              «Хороший дизайн — это не украшение. Это аргумент.»
             </p>
             <div className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
-              {[["150+", "проектов"], ["40+", "клиентов"], ["12", "наград"]].map(([n, l]) => (
+              {[["153", "проекта"], ["47", "клиентов"], ["8", "наград"]].map(([n, l]) => (
                 <div key={l}>
                   <div className="font-display text-3xl text-gold font-light">{n}</div>
                   <div className="text-xs tracking-widest uppercase text-ivory/40 mt-1">{l}</div>
@@ -277,7 +341,8 @@ export default function Index() {
                     <div className="w-8 h-px bg-gold/20 group-hover:bg-gold/60 transition-all duration-500 mt-4 group-hover:w-12" />
                   </div>
                   <h3 className="font-display text-2xl font-light mb-4 group-hover:text-gold transition-colors duration-300">{s.title}</h3>
-                  <p className="text-ivory/50 text-sm leading-relaxed">{s.desc}</p>
+                  <p className="text-ivory/50 text-sm leading-relaxed mb-6">{s.desc}</p>
+                  <span className="text-xs tracking-widest uppercase text-gold/50 border-t border-white/10 pt-4 block">{s.detail}</span>
                 </div>
               </AnimSection>
             ))}
@@ -321,7 +386,8 @@ export default function Index() {
                     <div className="flex items-center justify-between">
                       <div>
                         <p className="text-xs tracking-[0.3em] uppercase text-gold mb-2">{w.cat} · {w.year}</p>
-                        <h3 className="font-display text-xl font-light text-ivory">{w.title}</h3>
+                        <h3 className="font-display text-xl font-light text-ivory mb-1">{w.title}</h3>
+                        <p className="text-ivory/40 text-xs font-body">{w.desc}</p>
                       </div>
                       <div className="w-10 h-10 border border-gold/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                         <Icon name="ArrowUpRight" size={16} className="text-gold" />
@@ -368,8 +434,9 @@ export default function Index() {
                         ))}
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="font-display text-2xl text-gold font-light">{c.result}</div>
+                    <div className="text-right md:border-l md:border-white/5 md:pl-6">
+                      <div className="font-display text-2xl text-gold font-light mb-2">{c.result}</div>
+                      <div className="text-xs tracking-widest uppercase text-ivory/30">{c.period}</div>
                     </div>
                   </div>
                 </div>
@@ -392,22 +459,30 @@ export default function Index() {
             </h2>
           </AnimSection>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {reviews.map((r, i) => (
               <AnimSection key={r.name}>
-                <div className="border border-white/10 p-8 hover:border-gold/30 transition-colors duration-500 flex flex-col h-full"
+                <div className="border border-white/10 p-7 hover:border-gold/30 transition-colors duration-500 flex flex-col h-full"
                   style={{ transitionDelay: `${i * 0.1}s` }}>
-                  <div className="flex gap-1 mb-6">
-                    {Array.from({ length: r.rating }).map((_, j) => (
-                      <span key={j} className="text-gold text-sm">★</span>
-                    ))}
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: r.rating }).map((_, j) => (
+                        <span key={j} className="text-gold text-xs">★</span>
+                      ))}
+                    </div>
+                    <span className="text-xs text-ivory/25 tracking-widest">{r.date}</span>
                   </div>
-                  <p className="font-display text-lg font-light text-ivory/80 leading-relaxed italic flex-1 mb-8">
+                  <p className="font-display text-base font-light text-ivory/75 leading-relaxed italic flex-1 mb-7">
                     «{r.text}»
                   </p>
-                  <div className="border-t border-white/10 pt-5">
-                    <div className="font-body font-medium text-sm text-ivory">{r.name}</div>
-                    <div className="text-xs tracking-widest uppercase text-ivory/40 mt-1">{r.role}</div>
+                  <div className="border-t border-white/10 pt-5 flex items-center gap-3">
+                    <div className="w-9 h-9 bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0">
+                      <span className="text-gold text-xs font-body font-medium tracking-wider">{r.avatar}</span>
+                    </div>
+                    <div>
+                      <div className="font-body font-medium text-sm text-ivory leading-tight">{r.name}</div>
+                      <div className="text-xs text-ivory/35 mt-0.5">{r.role}</div>
+                    </div>
                   </div>
                 </div>
               </AnimSection>
@@ -427,15 +502,18 @@ export default function Index() {
             <h2 className="font-display font-light mb-6" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
               Начнём<br />работу вместе?
             </h2>
-            <p className="text-ivory/50 leading-relaxed mb-10">
-              Расскажите о проекте — я отвечу в течение 24 часов и предложу пути решения.
+            <p className="text-ivory/50 leading-relaxed mb-4">
+              Расскажите о проекте — отвечу в течение 24 часов, обсудим задачи и форматы сотрудничества.
+            </p>
+            <p className="text-ivory/35 text-sm leading-relaxed mb-10">
+              Принимаю 2–3 новых проекта в месяц. Если свободных мест нет — поставлю в лист ожидания.
             </p>
 
             <div className="space-y-5">
               {[
-                { icon: "Mail", label: "Email", val: "hello@studio.ru" },
-                { icon: "Phone", label: "Телефон", val: "+7 (999) 000-00-00" },
-                { icon: "MapPin", label: "Город", val: "Москва, Россия" },
+                { icon: "Mail", label: "Email", val: "nechaev@a-studio.ru" },
+                { icon: "Phone", label: "Telegram", val: "@nechaev_design" },
+                { icon: "MapPin", label: "Работаю из", val: "Москва · удалённо" },
               ].map(item => (
                 <div key={item.label} className="flex items-center gap-4">
                   <div className="w-10 h-10 border border-gold/30 flex items-center justify-center flex-shrink-0">
