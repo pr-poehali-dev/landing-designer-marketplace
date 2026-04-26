@@ -10,6 +10,9 @@ const navLinks = [
   { label: "Портфолио", href: "#portfolio" },
   { label: "Видеообложки", href: "#video-covers" },
   { label: "Маркетплейсы", href: "#marketplaces" },
+  { label: "Видео WB/Ozon", href: "#mp-video-covers" },
+  { label: "Баннеры", href: "#mp-banners" },
+  { label: "Rich-контент", href: "#mp-rich" },
   { label: "Кейсы", href: "#cases" },
   { label: "Отзывы", href: "#reviews" },
   { label: "Контакты", href: "#contact" },
@@ -113,6 +116,26 @@ const videoCovers = [
     tag: "Brand Video",
     img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/d22aca69-11f8-4d27-a6ba-893f019d6f52.jpg",
   },
+];
+
+const mpVideoCovers = [
+  { title: "Косметика — Wildberries", tag: "WB", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/797958ec-9073-426d-b39a-14af68625fe9.jpg", desc: "Видеообложка для крема. Динамика + белый фон." },
+  { title: "Кроссовки — Ozon", tag: "Ozon", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/7fcd4cde-3589-480a-b255-e212cdc39a6b.jpg", desc: "Обложка с динамичным углом и градиентом." },
+  { title: "Кофемашина — WB", tag: "WB", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/547fa2c0-e31f-4225-87a6-5523d092bfff.jpg", desc: "Lifestyle-съёмка техники в интерьере." },
+  { title: "Детские игрушки — Ozon", tag: "Ozon", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/9a1dec56-76a8-4fc7-8d3e-c458f8d7b595.jpg", desc: "Яркая, жизнерадостная подача для детской категории." },
+  { title: "Часы Premium — WB", tag: "WB", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/afab09bc-ccab-47ee-b6ab-45afca4ad1a2.jpg", desc: "Люксовая обложка на чёрном с драматическим светом." },
+];
+
+const mpBanners = [
+  { title: "Fashion Sale — WB", tag: "Баннер WB", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/d6a6e089-af36-4b1a-bbb1-f38b033c1099.jpg", desc: "Акционный баннер для категории женской одежды." },
+  { title: "Электроника — Ozon", tag: "Баннер Ozon", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/b2b743fe-65d6-41c0-ae42-d813bd91637c.jpg", desc: "Тёмный tech-стиль для продвижения гаджетов." },
+  { title: "Декор дома — Ozon", tag: "Баннер Ozon", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/e7c62349-e5ae-4a61-87da-d4c46732b9a7.jpg", desc: "Тёплый минималистичный баннер для мебели и декора." },
+];
+
+const mpRichContent = [
+  { title: "Скинкейр-сыворотка", tag: "Rich Content", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/3d01ee59-786c-4f77-9139-bb9b3948b361.jpg", desc: "Инфографика: состав, этапы применения, до/после." },
+  { title: "Спортпит — протеин", tag: "Rich Content", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/4035fabc-e2da-4b94-bacb-d553be473d0c.jpg", desc: "Преимущества, способ применения, значки качества." },
+  { title: "Детский рюкзак", tag: "Rich Content", img: "https://cdn.poehali.dev/projects/16348c51-c09c-4ff6-8393-866fe76f0c6e/files/7a4e5ea5-bad0-4fa5-8eef-ac90d6f88129.jpg", desc: "Таблица размеров, материалы, особенности модели." },
 ];
 
 const cases = [
@@ -284,8 +307,8 @@ export default function Index() {
 
           <p className="text-ivory/50 font-body font-light text-lg max-w-md leading-relaxed mb-12 animate-fade-up"
             style={{ animationDelay: "0.6s", opacity: 0, animationFillMode: "forwards" }}>
-            Брендинг, веб-дизайн и упаковка для компаний,<br />
-            которые ценят эстетику и результат.
+            Видеообложки, баннеры, rich-контент и фото товаров<br />
+            для Wildberries, Ozon и других маркетплейсов.
           </p>
 
           <div className="flex items-center gap-6 animate-fade-up" style={{ animationDelay: "0.8s", opacity: 0, animationFillMode: "forwards" }}>
@@ -591,6 +614,167 @@ export default function Index() {
                   <Icon name="ArrowRight" size={14} />
                 </a>
               </div>
+            </div>
+          </AnimSection>
+        </div>
+      </section>
+
+      {/* MP VIDEO COVERS */}
+      <section id="mp-video-covers" className="py-28 px-8 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <AnimSection>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="block w-8 h-px bg-gold" />
+              <span className="text-xs tracking-[0.4em] uppercase text-gold">Видеообложки для маркетплейсов</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
+              <h2 className="font-display font-light leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+                Видеообложки<br /><em className="not-italic text-gold">Wildberries и Ozon</em>
+              </h2>
+              <p className="text-ivory/45 text-sm max-w-xs leading-relaxed md:text-right mb-2">
+                Первая секунда решает всё. Делаю обложки, которые останавливают покупателя в ленте и повышают CTR карточки.
+              </p>
+            </div>
+          </AnimSection>
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {mpVideoCovers.map((v, i) => (
+              <AnimSection key={v.title}>
+                <div className="group" style={{ transitionDelay: `${i * 0.08}s` }}>
+                  <div className="relative overflow-hidden mb-3">
+                    <img src={v.img} alt={v.title} className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-obsidian/0 group-hover:bg-obsidian/40 transition-all duration-500 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-10 h-10 border border-gold flex items-center justify-center">
+                        <Icon name="Play" size={14} className="text-gold ml-0.5" />
+                      </div>
+                    </div>
+                    <span className="absolute top-2 left-2 text-xs px-2 py-1 bg-obsidian/80 border border-gold/30 text-gold backdrop-blur-sm tracking-widest uppercase">
+                      {v.tag}
+                    </span>
+                  </div>
+                  <div className="text-sm font-light text-ivory/80 mb-1">{v.title}</div>
+                  <div className="text-xs text-ivory/40 leading-relaxed">{v.desc}</div>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
+          <AnimSection>
+            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/8 pt-8">
+              <div className="flex gap-8">
+                {[["от 1 500 ₽", "1 обложка"], ["от 6 000 ₽", "5 штук"], ["от 10 000 ₽", "10 штук"]].map(([p, l]) => (
+                  <div key={l}>
+                    <div className="font-display text-xl text-gold font-light">{p}</div>
+                    <div className="text-xs tracking-widest uppercase text-ivory/30 mt-1">{l}</div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://wa.me/79582323041?text=Хочу%20заказать%20видеообложки%20для%20маркетплейса" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-obsidian transition-all duration-500 flex-shrink-0">
+                Заказать <Icon name="ArrowRight" size={14} />
+              </a>
+            </div>
+          </AnimSection>
+        </div>
+      </section>
+
+      {/* BANNERS */}
+      <section id="mp-banners" className="py-28 px-8 md:px-16 bg-charcoal">
+        <div className="max-w-6xl mx-auto">
+          <AnimSection>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="block w-8 h-px bg-gold" />
+              <span className="text-xs tracking-[0.4em] uppercase text-gold">Баннеры для маркетплейсов</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
+              <h2 className="font-display font-light leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+                Промо-баннеры<br /><em className="not-italic text-gold">для акций и категорий</em>
+              </h2>
+              <p className="text-ivory/45 text-sm max-w-xs leading-relaxed md:text-right mb-2">
+                Баннеры для главной страницы, категорий и акций. Под требования WB, Ozon и Яндекс Маркета.
+              </p>
+            </div>
+          </AnimSection>
+          <div className="grid md:grid-cols-3 gap-6">
+            {mpBanners.map((b, i) => (
+              <AnimSection key={b.title}>
+                <div className="group" style={{ transitionDelay: `${i * 0.1}s` }}>
+                  <div className="relative overflow-hidden mb-4">
+                    <img src={b.img} alt={b.title} className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <span className="absolute top-3 left-3 text-xs px-3 py-1.5 bg-obsidian/80 border border-gold/30 text-gold backdrop-blur-sm tracking-widest uppercase">
+                      {b.tag}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-lg font-light mb-2 group-hover:text-gold transition-colors duration-300">{b.title}</h3>
+                  <p className="text-ivory/50 text-sm leading-relaxed">{b.desc}</p>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
+          <AnimSection>
+            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/8 pt-8">
+              <div className="flex gap-8">
+                {[["от 2 000 ₽", "1 баннер"], ["от 5 000 ₽", "3 баннера"], ["от 12 000 ₽", "полный сет"]].map(([p, l]) => (
+                  <div key={l}>
+                    <div className="font-display text-xl text-gold font-light">{p}</div>
+                    <div className="text-xs tracking-widest uppercase text-ivory/30 mt-1">{l}</div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://wa.me/79582323041?text=Хочу%20заказать%20баннеры%20для%20маркетплейса" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-obsidian transition-all duration-500 flex-shrink-0">
+                Заказать <Icon name="ArrowRight" size={14} />
+              </a>
+            </div>
+          </AnimSection>
+        </div>
+      </section>
+
+      {/* RICH CONTENT */}
+      <section id="mp-rich" className="py-28 px-8 md:px-16">
+        <div className="max-w-6xl mx-auto">
+          <AnimSection>
+            <div className="flex items-center gap-4 mb-4">
+              <span className="block w-8 h-px bg-gold" />
+              <span className="text-xs tracking-[0.4em] uppercase text-gold">Rich-контент</span>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
+              <h2 className="font-display font-light leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+                Rich-контент<br /><em className="not-italic text-gold">продающие карточки</em>
+              </h2>
+              <p className="text-ivory/45 text-sm max-w-xs leading-relaxed md:text-right mb-2">
+                Инфографика, состав, преимущества, таблицы размеров — всё, что убеждает покупателя нажать «Купить».
+              </p>
+            </div>
+          </AnimSection>
+          <div className="grid md:grid-cols-3 gap-8">
+            {mpRichContent.map((r, i) => (
+              <AnimSection key={r.title}>
+                <div className="group" style={{ transitionDelay: `${i * 0.1}s` }}>
+                  <div className="relative overflow-hidden mb-4 border border-white/5 group-hover:border-gold/20 transition-colors duration-500">
+                    <img src={r.img} alt={r.title} className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <span className="absolute top-3 left-3 text-xs px-3 py-1.5 bg-obsidian/80 border border-gold/30 text-gold backdrop-blur-sm tracking-widest uppercase">
+                      {r.tag}
+                    </span>
+                  </div>
+                  <h3 className="font-display text-lg font-light mb-2 group-hover:text-gold transition-colors duration-300">{r.title}</h3>
+                  <p className="text-ivory/50 text-sm leading-relaxed">{r.desc}</p>
+                </div>
+              </AnimSection>
+            ))}
+          </div>
+          <AnimSection>
+            <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-white/8 pt-8">
+              <div className="flex gap-8">
+                {[["от 3 000 ₽", "1 карточка"], ["от 12 000 ₽", "5 карточек"], ["от 20 000 ₽", "10 карточек"]].map(([p, l]) => (
+                  <div key={l}>
+                    <div className="font-display text-xl text-gold font-light">{p}</div>
+                    <div className="text-xs tracking-widest uppercase text-ivory/30 mt-1">{l}</div>
+                  </div>
+                ))}
+              </div>
+              <a href="https://wa.me/79582323041?text=Хочу%20заказать%20rich-контент%20для%20маркетплейса" target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-gold text-gold text-sm tracking-widest uppercase hover:bg-gold hover:text-obsidian transition-all duration-500 flex-shrink-0">
+                Заказать <Icon name="ArrowRight" size={14} />
+              </a>
             </div>
           </AnimSection>
         </div>
