@@ -272,7 +272,7 @@ export default function Index() {
         <div className="relative z-10 max-w-5xl">
           <div className="flex items-center gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
             <span className="block w-12 h-px bg-gold" />
-            <span className="text-xs tracking-[0.4em] uppercase text-gold font-body">Дизайн-студия</span>
+            <span className="text-xs tracking-[0.4em] uppercase text-gold font-body">Дмитрий Богатырев</span>
           </div>
 
           <h1 className="font-display font-light leading-[0.9] mb-8 animate-fade-up"
