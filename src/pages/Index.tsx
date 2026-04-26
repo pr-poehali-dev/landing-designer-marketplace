@@ -511,10 +511,10 @@ export default function Index() {
 
             <div className="space-y-5">
               {[
-                { icon: "Mail", label: "Email", val: "bogatyrevdima131@gmail.com" },
-                { icon: "Phone", label: "Телефон", val: "+7 (958) 232-30-41" },
-                { icon: "MessageCircle", label: "WhatsApp / MAX", val: "+7 (958) 232-30-41" },
-                { icon: "MapPin", label: "Работаю из", val: "Москва · удалённо" },
+                { icon: "Mail", label: "Email", val: "bogatyrevdima131@gmail.com", href: "mailto:bogatyrevdima131@gmail.com" },
+                { icon: "Phone", label: "Телефон", val: "+7 (958) 232-30-41", href: "tel:+79582323041" },
+                { icon: "MessageCircle", label: "WhatsApp / MAX", val: "+7 (958) 232-30-41", href: "https://wa.me/79582323041" },
+                { icon: "MapPin", label: "Работаю из", val: "Москва · удалённо", href: null },
               ].map(item => (
                 <div key={item.label} className="flex items-center gap-4">
                   <div className="w-10 h-10 border border-gold/30 flex items-center justify-center flex-shrink-0">
@@ -522,7 +522,14 @@ export default function Index() {
                   </div>
                   <div>
                     <div className="text-xs tracking-widest uppercase text-ivory/30 mb-0.5">{item.label}</div>
-                    <div className="text-ivory/80 text-sm">{item.val}</div>
+                    {item.href ? (
+                      <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer"
+                        className="text-ivory/80 text-sm hover:text-gold transition-colors duration-300">
+                        {item.val}
+                      </a>
+                    ) : (
+                      <div className="text-ivory/80 text-sm">{item.val}</div>
+                    )}
                   </div>
                 </div>
               ))}
