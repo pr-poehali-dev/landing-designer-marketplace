@@ -325,7 +325,7 @@ export default function Index() {
             <div className="relative">
               <img
                 src={ABOUT_IMAGE}
-                alt="Александр Нечаев"
+                alt="Дмитрий Богатырев"
                 className="w-full aspect-[4/5] object-cover"
                 style={{ filter: "grayscale(20%) contrast(1.05)" }}
               />
@@ -343,7 +343,7 @@ export default function Index() {
               <span className="text-xs tracking-[0.4em] uppercase text-gold">О мне</span>
             </div>
             <h2 className="font-display font-light leading-tight mb-6" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
-              Александр Нечаев —<br />
+              Дмитрий Богатырев —<br />
               <em className="not-italic text-gold">дизайнер брендов</em>
             </h2>
             <p className="text-ivory/60 leading-relaxed mb-6">
