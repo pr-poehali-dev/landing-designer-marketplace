@@ -251,8 +251,14 @@ export default function Index() {
               Смотреть работы
               <Icon name="ArrowRight" size={16} />
             </a>
-            <a href="#contact" className="text-sm tracking-widest uppercase text-ivory/40 hover:text-ivory transition-colors duration-300">
-              Написать
+            <a
+              href="https://wa.me/79582323041"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm tracking-widest uppercase text-ivory/40 hover:text-gold transition-colors duration-300"
+            >
+              <Icon name="MessageCircle" size={15} />
+              Написать в WhatsApp
             </a>
           </div>
         </div>
